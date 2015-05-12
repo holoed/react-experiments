@@ -1,26 +1,22 @@
-var Box = React.createClass({
-  getInitialState: function() {
-    return { number: 0 };
-  },
+"use strict";
 
-  increaseNumber: function(event) {
-    this.setState({ number: this.state.number + 1 });
-  },
-
-  decreaseNumber: function(event) {
-  	this.setState({ number: this.state.number - 1 });
-  },
-
+const Main = React.createClass({
+  
   render: function() {
-    return <div>
-               <p>{this.state.number}</p>
-               <button onClick={this.increaseNumber}>Increase</button>
-               <button onClick={this.decreaseNumber}>Decrease</button>
-           </div>
+    let Jumbotron = ReactBootstrap.Jumbotron;
+    let Button = ReactBootstrap.Button;
+    return (<div>
+                <Navigation/>
+                <Jumbotron style={{textAlign:'center'}}>
+                        <h1>Under Construction</h1>
+                        <p>This is the start of the new Gattaca Limited website.</p>
+                        <p><Button bsStyle='primary'>Learn more</Button></p>
+                </Jumbotron>
+            </div>);
   }
 });
 
 React.render(
-  React.createElement(Box, null),
+  React.createElement(Main, null),
   document.getElementById('content')
 );
